@@ -23,10 +23,7 @@ export async function getUrl(req, res) {
 
       const origUrl = rows[0].longUrl;
 
-      return res.status(200).json({
-        success: true,
-        origUrl,
-      });
+      return res.redirect(302,origUrl);
     }
   );
 }
